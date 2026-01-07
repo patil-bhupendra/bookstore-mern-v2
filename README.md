@@ -1,1 +1,1 @@
-# Bookstore MERN v2
+# Bookstore MERN Web Application (v2)
