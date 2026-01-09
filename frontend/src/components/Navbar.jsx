@@ -7,8 +7,10 @@ import {
 } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { HiOutlineUser } from "react-icons/hi";
+import avatarImg from "../assets/avatar.png";
 
 const Navbar = () => {
+  const currentUser = true;
   return (
     <header className="max-w-screen-2xl mx-auto px-4 py-6">
       <nav className="flex justify-between items-center">
@@ -31,7 +33,26 @@ const Navbar = () => {
 
         {/* right side */}
         <div className="relative flex items-center md:space-x-3 space-x-2">
-          <HiOutlineUser className="size-6" />
+          <div>
+            {currentUser ? (
+              <>
+                <button>
+                  <img
+                    src={avatarImg}
+                    alt=""
+                    className={`size-7 rounded-full ${
+                      currentUser ? "ring-2 ring-blue-500" : ""
+                    }`}
+                  />
+                </button>
+              </>
+            ) : (
+              <Link to="/login">
+                <HiOutlineUser className="size-6" />
+              </Link>
+            )}
+          </div>
+
           <button className="hidden sm:block">
             <HiOutlineHeart className="size-6" />
           </button>
