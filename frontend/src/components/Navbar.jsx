@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   HiOutlineShoppingCart,
@@ -9,7 +9,16 @@ import { IoIosSearch } from "react-icons/io";
 import { HiOutlineUser } from "react-icons/hi";
 import avatarImg from "../assets/avatar.png";
 
+const navigation = [
+  { name: "Dashboard", href: "/dashboard" },
+  { name: "Orders", href: "/orders" },
+  { name: "Cart Page", href: "/cart" },
+  { name: "Check Out", href: "/checkout" },
+];
+
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const currentUser = true;
   return (
     <header className="max-w-screen-2xl mx-auto px-4 py-6">
@@ -36,7 +45,7 @@ const Navbar = () => {
           <div>
             {currentUser ? (
               <>
-                <button>
+                <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                   <img
                     src={avatarImg}
                     alt=""
@@ -45,6 +54,20 @@ const Navbar = () => {
                     }`}
                   />
                 </button>
+                {/* show dropdown */}
+                {isDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
+                    <ul className="py-2">
+                      {navigation.map((item) => (
+                        <li key={item.name} onClick={()=> setIsDropdownOpen(false)}>
+                          <Link to={item.href} className="block px-4 py-2 text-sm hover:bg-gray-100">
+                          {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </>
             ) : (
               <Link to="/login">
