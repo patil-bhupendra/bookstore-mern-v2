@@ -81,7 +81,7 @@ const TopSellers = () => {
           },
         }}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper overflow-hidden"
       >
         {filteredBooks.length > 0 &&
           filteredBooks.map((book, index) => (
