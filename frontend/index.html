@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
 
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.png" />
     
+
+    <!-- Fonts (Optimized) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,13 +15,43 @@
       rel="stylesheet"
     />
 
+    <!-- SEO -->
+    <title>Online Bookstore | Buy & Explore Books</title>
+    <meta
+      name="description"
+      content="A full-stack MERN bookstore application with authentication, cart, and admin dashboard."
+    />
+
+    <!-- Mobile Optimization -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <meta name="theme-color" content="#1e293b" />
+
+    <!-- App Info -->
+    <meta name="application-name" content="Bookstore App" />
+
+    <!-- Open Graph (for sharing) -->
+    <meta property="og:title" content="Online Bookstore MERN App" />
+    <meta
+      property="og:description"
+      content="Full-stack bookstore with cart, authentication, and admin dashboard."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/preview.png" />
+
+    <!-- Optional: Twitter Preview -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Online Bookstore MERN App" />
+    <meta
+      name="twitter:description"
+      content="Full-stack bookstore with cart, authentication, and admin dashboard."
+    />
+    <meta name="twitter:image" content="/preview.png" />
   </head>
 
   <body>
     <div id="root"></div>
+
+    <!-- React Entry -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
-</html> 
-
+</html>

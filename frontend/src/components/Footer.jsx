@@ -19,9 +19,10 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
+              
               <FaBookOpen className="text-primary text-2xl" />
               <span className="text-xl font-bold tracking-wide text-white">
-                Read<span className="text-primary">ora</span>
+                Book<span className="text-primary">store</span>
               </span>
             </div>
 
