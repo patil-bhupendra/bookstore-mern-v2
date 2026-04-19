@@ -1,97 +1,111 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  HiOutlineShoppingCart,
-  HiOutlineHeart,
-  HiMiniBars3CenterLeft,
-} from "react-icons/hi2";
+import { HiOutlineShoppingCart, HiOutlineHeart } from "react-icons/hi2";
 import { IoIosSearch } from "react-icons/io";
 import { HiOutlineUser } from "react-icons/hi";
+import { FaBookOpen } from "react-icons/fa";
 import avatarImg from "../assets/avatar.png";
-
-const navigation = [
-  { name: "Dashboard", href: "/dashboard" },
-  { name: "Orders", href: "/orders" },
-  { name: "Cart Page", href: "/cart" },
-  { name: "Check Out", href: "/checkout" },
-];
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
   const currentUser = false;
-  return (
-    <header className="max-w-screen-2xl mx-auto px-4 py-6">
-      <nav className="flex justify-between items-center">
-        {/* left side    */}
-        <div className="flex items-center md:gap-16 gap-4">
-          <Link to="/">
-            <HiMiniBars3CenterLeft className="size-6" />
-          </Link>
-        </div>
 
-        {/* search input */}
-        <div className="relative sm:w-72 w-40 space-x-2">
-          <IoIosSearch className="absolute inline-block left-3 inset-y-2 " />
+  return (
+    <header className="bg-gray-950/80 backdrop-blur-md border-b border-gray-800 shadow-md text-white sticky top-0 z-50">
+      <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <FaBookOpen className="text-primary text-2xl" />
+          <span className="text-2xl font-bold tracking-tight">
+            Read<span className="text-primary">ora</span>
+          </span>
+        </Link>
+
+        {/* Search */}
+        <div className="relative hidden md:block w-72">
+          <IoIosSearch className="absolute left-3 top-2.5 text-gray-400" />
           <input
             type="text"
-            placeholder="search here"
-            className="bg-[#EAEAEA] w-full py-1 md:px-8 px-6 rounded-md focus:outline-none"
+            placeholder="Search books..."
+            className="w-full bg-gray-900 text-sm px-10 py-2 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
 
-        {/* right side */}
-        <div className="relative flex items-center md:space-x-3 space-x-2">
-          <div>
+        {/* Right Side */}
+        <div className="flex items-center gap-4">
+          {/* Wishlist */}
+          <button className="hidden sm:block hover:text-primary transition duration-200">
+            <HiOutlineHeart className="size-6" />
+          </button>
+
+          {/* User */}
+          <div className="relative">
             {currentUser ? (
               <>
                 <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                   <img
                     src={avatarImg}
-                    alt=""
-                    className={`size-7 rounded-full ${
-                      currentUser ? "ring-2 ring-blue-500" : ""
-                    }`}
+                    alt="user"
+                    className="size-8 rounded-full ring-2 ring-primary"
                   />
                 </button>
-                {/* show dropdown */}
+
                 {isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
-                    <ul className="py-2">
-                      {navigation.map((item) => (
-                        <li
-                          key={item.name}
+                  <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg z-40">
+                    <ul className="py-2 text-sm">
+                      <li>
+                        <Link
+                          to="/dashboard"
+                          className="block px-4 py-2 hover:bg-gray-100"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          <Link
-                            to={item.href}
-                            className="block px-4 py-2 text-sm hover:bg-gray-100"
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
-                      ))}
+                          Dashboard
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/orders"
+                          className="block px-4 py-2 hover:bg-gray-100"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          Orders
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/logout"
+                          className="block px-4 py-2 hover:bg-gray-100"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          Logout
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 )}
               </>
             ) : (
-              <Link to="/login">
+              <Link
+                to="/login"
+                className="hover:text-primary transition duration-200"
+              >
                 <HiOutlineUser className="size-6" />
               </Link>
             )}
           </div>
 
-          <button className="hidden sm:block">
-            <HiOutlineHeart className="size-6" />
-          </button>
-
+          {/* Cart */}
           <Link
             to="/cart"
-            className="bg-primary p-1 sm:px-6 px-2 flex items-center rounded-sm"
+            className="relative bg-primary px-4 py-2 rounded-md flex items-center gap-2 hover:bg-primary-dark transition duration-200"
           >
-            <HiOutlineShoppingCart className="" />
-            <span className="text-sm font-semibold sm:ml-1">0</span>
+            <HiOutlineShoppingCart />
+            <span className="text-sm font-semibold">0</span>
+
+            {/* Badge */}
+            <span className="absolute -top-2 -right-2 bg-red-500 text-xs px-1.5 rounded-full">
+              0
+            </span>
           </Link>
         </div>
       </nav>
