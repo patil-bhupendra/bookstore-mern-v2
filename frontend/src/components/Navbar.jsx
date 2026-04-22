@@ -5,11 +5,14 @@ import { IoIosSearch } from "react-icons/io";
 import { HiOutlineUser } from "react-icons/hi";
 import { FaBookOpen } from "react-icons/fa";
 import avatarImg from "../assets/avatar.png";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const currentUser = false;
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  
 
+  const currentUser = false;
   return (
     <header className="bg-gray-950/80 backdrop-blur-md border-b border-gray-800 shadow-md text-white sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -100,12 +103,15 @@ const Navbar = () => {
             className="relative bg-primary px-4 py-2 rounded-md flex items-center gap-2 hover:bg-primary-dark transition duration-200"
           >
             <HiOutlineShoppingCart />
-            <span className="text-sm font-semibold">0</span>
-
-            {/* Badge */}
-            <span className="absolute -top-2 -right-2 bg-red-500 text-xs px-1.5 rounded-full">
+            {
+              cartItems.length > 0 ? <span className="text-sm font-semibold">{cartItems.length}</span> : <span >
               0
             </span>
+            }
+            
+
+            
+            
           </Link>
         </div>
       </nav>
