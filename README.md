@@ -84,7 +84,6 @@ cd bookstore-v2/frontend
 npm install
 npm run dev
 ```
-
 ## 🤝 Contributing
 
 This is a personal project, but suggestions are always welcome!
