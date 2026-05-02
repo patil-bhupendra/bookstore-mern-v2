@@ -1,7 +1,7 @@
 const express = require("express");
 const Book = require("./book.model");
 const router = express.Router();
-const { postABook, getAllBooks } = require("./book.controller");
+const { postABook, getAllBooks, getSingleBook } = require("./book.controller");
 
 // frontend => backend server => controller => book schema => database => send to server => back to the fronted
 //post = when submit something frontend to db
@@ -14,5 +14,8 @@ router.post("/create-book", postABook);
 
 // get all books
 router.get("/", getAllBooks)
+
+// single book endpoint
+router.get("/:id", getSingleBook)
 
 module.exports = router;

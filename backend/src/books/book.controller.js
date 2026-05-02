@@ -23,7 +23,25 @@ const getAllBooks = async (req, res) => {
     }
 }
 
+// single book endpoint
+const getSingleBook = async (req, res) => {
+
+  try{
+      const {id} = req.params;
+      const book = await Book.findById(id)
+      if(!book){
+        res.status(404).send({ message: "Book Not Found!"});
+      }
+      res.status(200).send(book);
+
+    } catch(error){
+      console.error("Error fetching book", error);
+      res.status(500).send({message: "Failed to fetch book"})
+    }
+}
+
 module.exports = {
     postABook,
-    getAllBooks
+    getAllBooks,
+    getSingleBook
 }
