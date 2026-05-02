@@ -1,4 +1,4 @@
-const Book = require("./book.model")
+const Book = require("./book.model");
 
 const postABook = async (req, res) => {
   try {
@@ -7,41 +7,59 @@ const postABook = async (req, res) => {
     res.status(200).send({ message: "Book posted sucessfully", book: newBook });
   } catch (error) {
     console.error("Error creating book", error);
-    res.status(500).send({ message: "Failed to created book"});
+    res.status(500).send({ message: "Failed to created book" });
   }
-}
+};
 
 // get all books
 const getAllBooks = async (req, res) => {
-    try{
-      const books = await Book.find().sort({createdAt: -1});
-      res.status(200).send(books);
-
-    } catch(error){
-      console.error("Error fetching books", error);
-      res.status(500).send({message: "Failed to fetch books"})
-    }
-}
+  try {
+    const books = await Book.find().sort({ createdAt: -1 });
+    res.status(200).send(books);
+  } catch (error) {
+    console.error("Error fetching books", error);
+    res.status(500).send({ message: "Failed to fetch books" });
+  }
+};
 
 // single book endpoint
 const getSingleBook = async (req, res) => {
-
-  try{
-      const {id} = req.params;
-      const book = await Book.findById(id)
-      if(!book){
-        res.status(404).send({ message: "Book Not Found!"});
-      }
-      res.status(200).send(book);
-
-    } catch(error){
-      console.error("Error fetching book", error);
-      res.status(500).send({message: "Failed to fetch book"})
+  try {
+    const { id } = req.params;
+    const book = await Book.findById(id);
+    if (!book) {
+      res.status(404).send({ message: "Book Not Found!" });
     }
-}
+    res.status(200).send(book);
+  } catch (error) {
+    console.error("Error fetching book", error);
+    res.status(500).send({ message: "Failed to fetch book" });
+  }
+};
+
+// update book data
+const updateBook = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedBook = await Book.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    if(!updatedBook){
+      res.status(404).send({ message: "Book is Not Found!" });
+    }
+    res.status(200).send({
+      message: "Book updated successfully",
+      book: updatedBook
+    })
+  } catch (error) {
+    console.error("Error updating a book", error);
+    res.status(500).send({ message: "Failed to update a book" });
+  }
+};
 
 module.exports = {
-    postABook,
-    getAllBooks,
-    getSingleBook
-}
+  postABook,
+  getAllBooks,
+  getSingleBook,
+  updateBook,
+};
