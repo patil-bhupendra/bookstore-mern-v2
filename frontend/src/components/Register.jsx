@@ -6,7 +6,8 @@ import { useAuth } from "../context/AuthContext";
 
 const Register = () => {
   const [message, setMessage] = useState("");
-  const { registerUser } = useAuth();
+  const { registerUser, signInWithGoogle } = useAuth();
+  console.log(registerUser);
   const {
     register,
     handleSubmit,
@@ -23,11 +24,20 @@ const Register = () => {
       alert("User register successfully");
     } catch (error) {
       setMessage("Please provide a valid email and password");
-      console.error(error) 
+      console.error(error);
     }
   };
 
-  const handleGoogleSignIn = () => {};
+  const handleGoogleSignIn = async () => {
+    try {
+      await signInWithGoogle();
+      alert("Login successful!");
+      navigate("/");
+    } catch (error) {
+      alert("Google sign in failed!");
+      console.error(error);
+    }
+  };
   return (
     <div className="h-[calc(100vh-120px)] flex justify-center items-center">
       <div className="w-full max-w-sm mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
