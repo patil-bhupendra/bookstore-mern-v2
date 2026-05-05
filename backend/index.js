@@ -17,7 +17,10 @@ app.use(
 
 // routes
 const bookRoutes = require("./src/books/book.route");
+const orderRoutes = require("./src/orders/order.route")
+
 app.use("/api/books", bookRoutes);
+app.use("/api/orders", orderRoutes);
 
 app.get("/", (req, res) => {
   res.send("Book store server is running!");
