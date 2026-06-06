@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import Swal from "sweetalert2";
 import { useCreateOrderMutation } from "../../redux/features/orders/ordersApi";
@@ -22,6 +22,7 @@ const CheckoutPage = () => {
   } = useForm();
 
   const [createOrder, { isLoading, error }] = useCreateOrderMutation();
+  const navigate = useNavigate()
 
   const [isChecked, setIsChecked] = useState(false);
   const onSubmit = async (data) => {
@@ -49,6 +50,7 @@ const CheckoutPage = () => {
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, It's Okay",
       });
+      navigate("/orders")
     } catch (error) {
       console.error("Error place an order", error);
       alert("Failed to place an order");
