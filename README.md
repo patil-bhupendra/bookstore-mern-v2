@@ -128,23 +128,31 @@ bookstore-mern-v2/
 ```
 git clone https://github.com/patil-bhupendra/bookstore-mern-v2.git
 ```
-### Frontend Setup
-```
-cd frontend
-npm install
-npm run dev
-```
 ### Backend Setup
 ```
 cd backend
 npm install
 npm start
 ```
-### Environment Variables
-Create a .env file inside the backend directory:
+Create .env file:
 ```
 DB_URL=your_mongodb_connection_string
 JWT_SECRET_KEY=your_secret_key
+```
+### Frontend Setup
+```
+cd frontend
+npm install
+npm run dev
+```
+Create .env file:
+```
+VITE_API_KEY=your_api_key
+VITE_AUTH_DOMAIN=your_auth_domain
+VITE_PROJECT_ID=your_project_id
+VITE_STORAGE_BUCKET=your_storage_bucket
+VITE_MESSAGING_SENDER_ID=your_sender_id
+VITE_APP_ID=your_app_id
 ```
 ---
 ## 🎯 Key Highlights
