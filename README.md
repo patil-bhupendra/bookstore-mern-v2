@@ -1,6 +1,6 @@
 # 📚 Readora – Bookstore MERN Web Application (v2)
 
-🚀 **Live Demo:** [Bookstore MERN v2](https://bookstore-mern-v2.vercel.app/)
+🚀 **Live Demo:** [Readora](https://bookstore-mern-v2.vercel.app/)
 
 Readora is a full-stack bookstore platform built using the MERN Stack (MongoDB, Express.js, React.js, and Node.js).
 
