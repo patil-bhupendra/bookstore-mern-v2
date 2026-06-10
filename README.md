@@ -7,6 +7,18 @@ A full-stack Bookstore Web Application built using the MERN Stack.
 This is Version 2 of my previous Bookstore project, completely rebuilt from scratch with a more scalable architecture, improved user experience, better code organization, enhanced security, and optimized performance.
 
 ---
+## 🔄 What's New in Version 2
+
+- Rebuilt the application from scratch
+- Improved project architecture and folder structure
+- Enhanced Admin Dashboard
+- Better order management workflow
+- Improved cart and checkout experience
+- Cleaner and more maintainable codebase
+- Modern responsive UI
+- Optimized performance and scalability
+
+---
 
 ## 🚀 Live Features
 
@@ -52,8 +64,7 @@ This is Version 2 of my previous Bookstore project, completely rebuilt from scra
 - Mongoose
 
 ### Authentication
-- Firebase Authentication
-- JSON Web Tokens (JWT)
+- Firebase + JWT Authentication
 
 ### Other Tools & Libraries
 - Axios
@@ -66,8 +77,7 @@ This is Version 2 of my previous Bookstore project, completely rebuilt from scra
 
 ## 🔐 Authentication & Security
 
-- Firebase Authentication
-- JWT-based Authentication
+- Firebase + JWT Authentication
 - Protected Routes
 - Role-Based Access Control (Admin/User)
 - Secure API Communication
@@ -111,6 +121,7 @@ bookstore-mern-v2/
 ├── README.md
 └── vercel.json
 ```
+---
 
 ## ⚙️ Installation
 ### Clone Repository
@@ -142,7 +153,7 @@ JWT_SECRET_KEY=your_secret_key
 - Admin Dashboard
 - Cart & Checkout System
 - Order Management
-- JWT Authentication
+- Firebase + JWT Authentication
 - REST API Integration
 - MongoDB Database Integration
 - Production Deployment Ready
@@ -158,5 +169,8 @@ JWT_SECRET_KEY=your_secret_key
 
 This is a personal project, but suggestions are always welcome!
 
-## 📬 Contact
+## 👨‍💻 Developer
+
 GitHub: https://github.com/patil-bhupendra
+
+Feel free to connect or provide feedback regarding the project.
