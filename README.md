@@ -2,7 +2,7 @@
 
 🚀 **Live Demo:** [Bookstore MERN v2](https://bookstore-mern-v2.vercel.app/)
 
-A full-stack Bookstore Web Application built using the MERN Stack.
+Readora is a full-stack bookstore platform built using the MERN Stack (MongoDB, Express.js, React.js, and Node.js).
 
 This is Version 2 of my previous Bookstore project, completely rebuilt from scratch with a more scalable architecture, improved user experience, better code organization, enhanced security, and optimized performance.
 
