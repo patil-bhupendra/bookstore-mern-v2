@@ -72,11 +72,10 @@ This is Version 2 of my previous Bookstore project, completely rebuilt from scra
 ---
 
 ### 📁 Project Structure
-```
-bookstore-mern-v2/ │ ├── backend/ │ ├── src/ │ │ ├── books/ │ │ ├── middleware/ │ │ ├── orders/ │ │ ├── stats/ │ │ └── users/ │ │ │ ├── index.js │ ├── package.json │ └── vercel.json │ ├── frontend/ │ ├── public/ │ │ └── books.json │ │ │ ├── src/ │ │ ├── assets/ │ │ ├── components/ │ │ ├── context/ │ │ ├── firebase/ │ │ ├── pages/ │ │ ├── redux/ │ │ ├── routers/ │ │ ├── utils/ │ │ ├── App.jsx │ │ └── main.jsx │ │ │ ├── package.json │ └── vite.config.js │ ├── README.md └── vercel.json
 
 ```
----
+bookstore-mern-v2/ │ ├── backend/ │ ├── src/ │ │ ├── books/ │ │ ├── middleware/ │ │ ├── orders/ │ │ ├── stats/ │ │ └── users/ │ │ │ ├── index.js │ ├── package.json │ └── vercel.json │ ├── frontend/ │ ├── public/ │ │ └── books.json │ │ │ ├── src/ │ │ ├── assets/ │ │ ├── components/ │ │ ├── context/ │ │ ├── firebase/ │ │ ├── pages/ │ │ ├── redux/ │ │ ├── routers/ │ │ ├── utils/ │ │ ├── App.jsx │ │ └── main.jsx │ │ │ ├── package.json │ └── vite.config.js │ ├── README.md └── vercel.json
+```
 
 ## ⚙️ Installation
 ### Clone Repository
