@@ -1,4 +1,4 @@
-# 📚 Bookstore MERN Web Application (v2)
+# 📚 Readora – Bookstore MERN Web Application (v2)
 
 🚀 **Live Demo:** [Bookstore MERN v2](https://bookstore-mern-v2.vercel.app/)
 
