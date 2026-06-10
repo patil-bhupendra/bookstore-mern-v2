@@ -1,89 +1,122 @@
 # 📚 Bookstore MERN Web Application (v2)
 
-🚧 Project in Progress
+A full-stack Bookstore Web Application built using the MERN Stack.
 
-A full-stack Bookstore web application built using the MERN stack.
-This is version 2 of my previous Bookstore project, rebuilt from scratch
-with a more scalable architecture, improved UI, and better performance.
+This is Version 2 of my previous Bookstore project, completely rebuilt from scratch with a more scalable architecture, improved user experience, better code organization, enhanced security, and optimized performance.
 
 ---
 
-## 🚀 Features (Planned & In Progress)
+## 🚀 Live Features
 
 ### 👤 User Module
 - Browse books by category
 - View detailed book information
-- Add/remove books from cart
-- Secure checkout system
-- Order placement & order history
+- Search and filter books
+- Add and remove books from cart
+- Secure checkout process
+- Place orders online
+- View order history
+- User authentication and authorization
+- Responsive design for all devices
 
 ### 🛠️ Admin Module
+- Secure admin login
 - Admin dashboard
-- Add, update, delete books
-- Manage users
-- Manage orders & track sales
+- Add new books
+- Update existing books
+- Delete books
+- Manage customer orders
+- Track sales and order activity
 
 ---
 
 ## 🧑‍💻 Tech Stack
 
 ### Frontend
-- React.js (with Vite)
+- React.js
+- Vite
 - Tailwind CSS
 - React Router DOM
-- Redux Toolkit (planned)
+- Redux Toolkit
+- RTK Query
 
-### Backend (Planned)
+### Backend 
 - Node.js
 - Express.js
-- REST API architecture
+- RESTful APIs
+- JWT Authentication
 
-### Database (Planned)
-- MongoDB with Mongoose
+### Database 
+- MongoDB
+- Mongoose
 
-### Authentication (Planned)
-- JWT-based authentication
-- Protected routes & role-based access
-
----
-
-## 📁 Project Status
-
-Currently working on:
-- Frontend UI development
-- Folder structure & reusable components
-- Routing setup
-
-Upcoming:
-- Backend API development
-- Database integration
-- Authentication system
-- Cart & checkout functionality
+### Other Tools & Libraries
+- Axios
+- React Hook Form
+- Swiper.js
+- dotenv
+- CORS
 
 ---
 
-## 🎯 Goal
+## 🔐 Authentication & Security
 
-To build a scalable, production-ready e-commerce platform for books
-with clean architecture, secure authentication, and optimized performance.
-
----
-
-## 📌 Version Info
-
-- v1: Basic MERN Bookstore (completed)
-- v2: Rebuilt with improved architecture & advanced features (current)
+- JWT-based Authentication
+- Protected Routes
+- Role-Based Access Control (Admin/User)
+- Secure API Communication
 
 ---
 
-## ⚙️ Installation (Frontend)
+### 📁 Project Structure
+```
 
-```bash
-git clone <your-repo-link>
-cd bookstore-v2/frontend
+
+```
+---
+
+## ⚙️ Installation
+### Clone Repository
+```
+git clone https://github.com/patil-bhupendra/bookstore-mern-v2.git
+```
+### Frontend Setup
+```
+cd frontend
 npm install
 npm run dev
 ```
+### Backend Setup
+```
+cd backend
+npm install
+npm start
+```
+### Environment Variables
+Create a .env file inside the backend directory:
+```
+DB_URL=your_mongodb_connection_string
+JWT_SECRET_KEY=your_secret_key
+```
+---
+## 🎯 Key Highlights
+- Full-Stack MERN Architecture
+- Modern Responsive UI
+- Admin Dashboard
+- Cart & Checkout System
+- Order Management
+- JWT Authentication
+- REST API Integration
+- MongoDB Database Integration
+- Production Deployment Ready
+
+## 📈 Future Enhancements
+- Online Payment Gateway Integration
+- Wishlist Feature
+- Book Reviews & Ratings
+- Email Notifications
+- Advanced Analytics Dashboard
+
 ## 🤝 Contributing
 
 This is a personal project, but suggestions are always welcome!
