@@ -46,11 +46,14 @@ This is Version 2 of my previous Bookstore project, completely rebuilt from scra
 - Node.js
 - Express.js
 - RESTful APIs
-- JWT Authentication
 
 ### Database 
 - MongoDB
 - Mongoose
+
+### Authentication
+- Firebase Authentication
+- JSON Web Tokens (JWT)
 
 ### Other Tools & Libraries
 - Axios
