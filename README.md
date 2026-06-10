@@ -1,6 +1,6 @@
 # 📚 Bookstore MERN Web Application (v2)
 
-🚀 **Live Demo:** https://bookstore-mern-v2.vercel.app/
+🚀 **Live Demo:** [Bookstore MERN v2](https://bookstore-mern-v2.vercel.app/)
 
 A full-stack Bookstore Web Application built using the MERN Stack.
 
